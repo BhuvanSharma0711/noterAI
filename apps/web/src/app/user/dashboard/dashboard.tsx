@@ -1,0 +1,20 @@
+"use client";
+import React, { useState } from "react";
+import { FeaturedBooks } from "./featuredbooks"
+import Link from "next/link";
+export function Dashboardpage() {
+  return(
+    <div>
+      <p className="text-msm md:text-medium lg:text-1xl font-medium ml-6 text-gray-400" >Ready to take notes?</p>
+      <p className="text-medium md:text-1xl lg:text-2xl font-semibold ml-6" >Sample's Home</p>
+      <div className="max-w-fit">
+        <div className="flex flex-row justify-between">
+          <p className="text-sm md:text-medium lg:text-1xl font-medium mt-7 md:mt-10 lg:mt-16 text-slate-600" >Books</p>
+          <Link href="/user/books" className="text-sm md:text-medium lg:text-1xl font-medium mt-7 md:mt-10 lg:mt-16 text-slate-600 text-end" >see all</Link>
+        </div>
+        <FeaturedBooks />
+      </div> 
+
+    </div>
+  );
+}
